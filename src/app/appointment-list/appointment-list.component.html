@@ -1,0 +1,20 @@
+<!--one way data binding using interpolation-->
+<!--<p>{{appointment}}</p>-->
+
+<!--<p>{{appointment.id}}</p>-->
+<!--<p>{{appointment.title}}</ p>-->
+<!--<p>{{appointment.date}}</p>-->
+<div>
+  <input [(ngModel)]="newAppointmentTitle"  placeholder="Appointment description">
+  <input [(ngModel)]="newAppointmentDate" type="date" placeholder="Appointment date">
+  <button (click)="addAppointment()"> Add</button>
+</div>
+
+<ul>
+<!--  angular directive-->
+ <li *ngFor="let appointment of appointments">
+{{ appointment.title}} {{ appointment.date | date: 'dd.MM.yyyy'}}
+ </li>
+
+</ul>
+
