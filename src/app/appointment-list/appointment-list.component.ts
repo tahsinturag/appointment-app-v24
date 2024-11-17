@@ -34,38 +34,18 @@ addAppointment() {
       date: this.newAppointmentDate
     }
     this.appointments.push(newAppointment);
-    this.newAppointmentTitle = "";
+    this.newAppointmentTitle = "";//reset the input field
     this.newAppointmentDate = new Date();
     // alert(this.appointments.length)
+    }
   }
+//  <!--delete item first have to create a new method-->
+  deleteAppointment(index: number) {
+  //    remove index using splice method
+    this.appointments.splice(index, 1);
   }
 }
-//   if (this.newAppointmentTitle.trim().length && this.newAppointmentDate){
-//     let newAppointment: Appointment = {
-//       id: Date.now(),
-//       title: this.newAppointmentTitle,
-//       date: this.newAppointmentDate
-//     }
-//
-//
-// }
-//
-//   this.appointments.push(newAppointment) //adds an element end of an array
-//
-//   this.newAppointmentTitle = “”; //reset the input field
-//   this.newAppointmentDate = new Date ();
-//
-//
-//
-// //using local storage
-//   localStorage.setItem('appointments', JSON.stringify(this.appointments));
-//
-// }
-//  }
-//  <!--delete item first have to create a new method-->
-//  deleteAppointment(index: number){
-//    this.appointments.splice(index, 1)
-//
+
 // //using local storage
 //    localStorage.setItem('appointments', JSON.stringify(this.appointments));
 //  };
